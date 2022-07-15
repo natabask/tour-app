@@ -4,8 +4,6 @@ services:
     image: mysql:latest
     ports:
       - '3306:3306'
-    volumes:
-      - ./mysql/log:/var/log/mysql
     security_opt:
       - seccomp:unconfined
     environment:
