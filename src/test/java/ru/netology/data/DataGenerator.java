@@ -36,7 +36,7 @@ public class DataGenerator {
     }
 
     public static String generateYear() {
-        final String[] years = {"23", "24", "25", "26", "27","28"};
+        final String[] years = {"23", "24", "25", "26"};
         Random random = new Random();
         int index = random.nextInt(years.length);
         String year = years[index];
