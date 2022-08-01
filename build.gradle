@@ -22,6 +22,11 @@ repositories {
     mavenCentral()
 }
 
+project.ext {
+    user = 'app'
+    password = 'pass'
+}
+
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.7.0'
     testImplementation 'com.codeborne:selenide:5.19.0'

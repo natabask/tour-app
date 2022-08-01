@@ -38,7 +38,7 @@ public class CreditPositiveTests {
     }
 
     @Test // пользователь ввел валидные данные во все поля - операция д. б. отклонена банком
-    public void shouldRGetBankRejection() {
+    public void shouldGetBankRejection() {
 
         var creditPageAccept = new CreditPageDecline();
         String actual = DBHelper.getCreditStatus();
