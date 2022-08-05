@@ -15,7 +15,7 @@ public class DBHelper {
         var runner = new QueryRunner();
         try (
                 Connection conn = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/app", "app", "pass"
+                        "jdbc:mysql://localhost:3306/app", System.getProperty("user"), System.getProperty("password")
                 );
         ) {
             String paymentStatus = runner.query(conn, usersSQL, new ScalarHandler<>());
@@ -29,7 +29,7 @@ public class DBHelper {
         var runner = new QueryRunner();
         try (
                 Connection conn = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/app", "app", "pass"
+                        "jdbc:mysql://localhost:3306/app", System.getProperty("user"), System.getProperty("password")
                 );
         ) {
             String creditStatus = runner.query(conn, usersSQL, new ScalarHandler<>());

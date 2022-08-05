@@ -22,11 +22,6 @@ repositories {
     mavenCentral()
 }
 
-project.ext {
-    user = 'app'
-    password = 'pass'
-}
-
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.7.0'
     testImplementation 'com.codeborne:selenide:5.19.0'
@@ -38,6 +33,6 @@ dependencies {
 
 test {
     useJUnitPlatform()
-    // в тестах, вызывая `gradlew test -Dselenide.headless=true` будем передавать этот параметр в JVM (где его подтянет Selenide)
     systemProperty 'selenide.headless', System.getProperty('selenide.headless')
+    systemProperties = System.properties
 }
